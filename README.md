@@ -1,1 +1,1 @@
-# booki-starter-pack
+# Projet 2 de la formation OpenClassrooms "Développeur Web"
