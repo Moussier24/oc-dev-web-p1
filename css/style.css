@@ -17,6 +17,11 @@
 
 button {
     border: none;
+    background: none;
+}
+
+ul {
+    list-style: none;
 }
 
 body {
@@ -61,9 +66,13 @@ a {
     height: 35px;
 }
 
-.navbar .navbar-links .navbar-link {
+.navbar .navbar-links .navbar-link,
+.navbar .navbar-links .navbar-link a {
     width: 100%;
     height: 100%;
+}
+
+.navbar .navbar-links .navbar-link a {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -154,6 +163,51 @@ a {
 .searchbar .searchbar-form .searchbar-button .searchbar-button-icon {
     display: none;
 }
+
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.filters .filters-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.filters .filters-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.filters .filters-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+    padding: 4px 19px;
+    border-radius: 25px;
+    border: 2px solid #D9D9D9;
+}
+
+.filters .filters-button:hover {
+    background-color: #DEEBFF;
+}
+
+.filters .filters-button .filters-button-icon {
+    color: var(--main-color);
+}
+
+.filters .filters-button .filters-button-icon,
+.filters .filters-button .filters-button-text {
+    font-size: 17px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/****** Sections ***********/
 
 .section-title {
     margin: 0;
@@ -284,6 +338,14 @@ a {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    /****** Search and Filters ***********/
+
+    .filters {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
@@ -306,8 +368,11 @@ a {
 
     .navbar .navbar-links .navbar-link {
         flex: 1;
-        align-items: flex-start;
         border-bottom: 2px solid var(--main-bg-color);
+    }
+
+    .navbar .navbar-links .navbar-link a {
+        align-items: flex-start;
     }
 
     .navbar .navbar-links .navbar-link.navbar-link-active {
@@ -345,5 +410,20 @@ a {
 
     .searchbar .searchbar-form .searchbar-button .searchbar-button-text {
         display: none;
+    }
+
+    .filters .filters-buttons {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .filters .filters-button {
+        width: 100%;
+    }
+
+    .filters .filters-button .filters-button-text {
+        white-space: inherit;
+        line-break: anywhere;
     }
 }
