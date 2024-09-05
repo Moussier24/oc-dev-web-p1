@@ -345,26 +345,27 @@ a {
     width: 65%;
 }
 
-/****** Populaires ***********/
-.populaires {
-    width: 32%;
-}
-
-.activites {
-    margin-top: 35px;
-    padding: 30px;
-}
-
 .hebergements-cards {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 30px;
 }
 
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+}
+
 .populaires-cards {
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+/****** Activites ***********/
+.activites {
+    margin-top: 35px;
+    padding: 30px;
 }
 
 .activites-cards {
@@ -376,7 +377,40 @@ a {
     flex: 1;
 }
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Footer ***********/
+
+footer {
+    background: #f2f2f2;
+    margin-top: 35px;
+}
+
+.footer-lists {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-list-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer-list {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-list,
+.footer-list-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-list-item {
+    font-size: 16px;
+    font-weight: 400;
+}
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
@@ -545,5 +579,20 @@ a {
     .populaires-cards,
     .activites-cards {
         flex-direction: column;
+    }
+
+    /****** Footer ***********/
+
+    footer {
+        padding: 30px;
+    }
+
+    .footer-lists {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .footer-list {
+        padding: 0;
     }
 }
